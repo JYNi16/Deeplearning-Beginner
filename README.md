@@ -1,4 +1,4 @@
-# Classical-Deeplearning-Algorithm-
+# Classical-Deeplearning-Algorithm
 Various Classical Deep-learning Algorithm coded by Tensorflow framework
 This project include:
 1. LeNet 
