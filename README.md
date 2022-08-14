@@ -6,4 +6,5 @@ This project include:
 3. LeNet (using mnist dataset, coded by tensorflow)
 4. AlexNet (using cifar-10 dataset, coded by tensorflow)
 5. ResNet (using cifar-10 dataset, coded by tensorflow)
-6. ....
+6. Self-defined dataset in tensorflow input pipline (binary classification)
+7. ......
