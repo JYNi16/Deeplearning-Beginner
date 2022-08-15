@@ -30,6 +30,7 @@ def train(train_data):
                 acc_meter.update_state(tf.argmax(out, axis=1), y)
         print("epoch:", epoch, "| Loss is:%.4f" % (loss), "|Accuracy is:%.4f" % (acc_meter.result().numpy()))
         acc_meter.reset_states()
+    tf.saved_model(model, "saved/1")
 
 if __name__ == '__main__':
     root = "E:/deeplearning/tensorflow/Tensorflow Input Pipeline/dogs-cats/train"
