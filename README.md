@@ -7,4 +7,5 @@ This project include:
 4. AlexNet (using cifar-10 dataset, coded by tensorflow)
 5. ResNet (using cifar-10 dataset, coded by tensorflow)
 6. Self-defined dataset in tensorflow input pipline (binary classification)
-7. ......
+7. Funetuing_tf funetuing training use vgg16 pretrained net-work 
+8. ...
