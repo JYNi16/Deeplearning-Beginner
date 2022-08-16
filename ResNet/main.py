@@ -15,10 +15,10 @@ def train(network, batch_size, optimizer, acc_meter):
             with tf.GradientTape() as tape:
                 x = tf.reshape(x, (-1, 32, 32, 3))
                 out = network(x)
-                y_onehot = tf.one_hot(y, depth=10)
+                #y_onehot = tf.one_hot(y, depth=10)
                 #loss = tf.square(out - y_onehot)
                 #loss = tf.reduce_sum(loss) / batch_size
-                loss = tf.keras.losses.categorical_crossentropy(from_logits=True, y_true=y_onehot, y_pred=out)
+                loss = tf.keras.losses.sparse_categorical_crossentropy(from_logits=True, y_true=y, y_pred=out)
                 loss = tf.reduce_mean(loss) 
                 loss_all += loss
             grads = tape.gradient(loss, network.trainable_variables)
