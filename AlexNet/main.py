@@ -2,7 +2,7 @@
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras import layers, optimizers, metrics
+from keras import layers, optimizers, metrics
 from model import AlexNet
 from dataset import cifar
 import config
@@ -17,12 +17,12 @@ def train(train_data):
         for data in train_data:
             with tf.GradientTape() as tape:
                 x, y = data
-                x = tf.reshape(x, [-1, 224, 224, 3])
+                x = tf.reshape(x, [-1, 32, 32, 3])
                 out = model(x)
-                y_onehot = tf.one_hot(y, depth=10)
+                #y_onehot = tf.one_hot(y, depth=10)
                 #loss = tf.square(out - y_onehot)
                 #loss = tf.reduce_sum(loss) / config.batch_size
-                loss = tf.keras.losses.categorical_crossentropy(from_logits=True, y_true=y_onehot, y_pred=out)
+                loss = tf.keras.losses.sparse_categorical_crossentropy(from_logits=True, y_true=y, y_pred=out)
                 loss = tf.reduce_mean(loss) 
                 grads = tape.gradient(loss, model.trainable_variables)
                 optimizer.apply_gradients(zip(grads, model.trainable_variables))
