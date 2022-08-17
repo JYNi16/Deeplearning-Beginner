@@ -8,7 +8,7 @@ class vgg(keras.Model):
         self.model = keras.applications.vgg16.VGG16(include_top=False, weights="imagenet")
         self.model.trainable = False
         self.Flatten = keras.layers.Flatten()
-        self.f1 = keras.layers.Dense(5)
+        self.f1 = keras.layers.Dense(2)
 
     def call(self, x):
         x = self.model(x)
