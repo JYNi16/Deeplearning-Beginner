@@ -1,7 +1,13 @@
 # Classical-Deeplearning-Algorithm
 Various Classical Deep-learning Algorithm coded by Tensorflow and Pytorch framework, respectively.
 
-This project include:
+Requirements:
+
+1. Pytorch 
+2. Tensorflow 2.X 
+3. Numpy
+
+Contents:
 1. Linear Regression(coded by numpy and pytorch, respectively)
 2. Softmax Regression(coded by Pytorch)
 3. LeNet (using mnist dataset, coded by tensorflow)
