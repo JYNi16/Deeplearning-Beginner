@@ -14,5 +14,5 @@ Contents:
 4. AlexNet (using cifar-10 dataset, coded by tensorflow)
 5. ResNet (using cifar-10 dataset, coded by tensorflow)
 6. Self-defined dataset in tensorflow input pipline (binary classification)
-7. Funetuing_tf funetuing training use vgg16 pretrained net-work (coded by tensorflow)
-8. ...
+7. Funetuning_tf funetuing training use vgg16 pretrained net-work (coded by tensorflow)
+8. Funetuning_torch funetuing training use alexnet pretrained net-work (coded by pytorch)
